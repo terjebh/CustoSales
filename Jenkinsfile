@@ -6,13 +6,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "'./mvnw' spring-boot:stop"
-                sh "'./mvnw' clean package"
+                sh "'./mvnw' install"
             }
         }
         stage('run') {
             steps {
-                sh "'java' -jar /var/lib/jenkins/.m2/repository/com/custosales/CustoSales/0.0.1-SNAPSHOT/CustoSales-0.0.1-SNAPSHOT.jar &"
+                sh "'/var/lib/jenkins/workspace/terjebh_CustoSales_master/mvnw' spring-boot:stop"
+                sh "'/var/lib/jenkins/workspace/terjebh_CustoSales_master/mvnw' spring-boot:run &"
             }
         }
     }
