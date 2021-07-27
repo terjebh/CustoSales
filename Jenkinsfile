@@ -6,12 +6,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                './mvnw install'
+                sh "'./mvnw' install"
             }
         }
         stage('run') {
             steps {
-                './mvnw spring-boot:run'
+                sh "'./mvnw' spring-boot:run"
             }
         }
     }
