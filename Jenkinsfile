@@ -12,7 +12,7 @@ pipeline {
         }
         stage('run') {
             steps {
-                sh "'/var/lib/jenkins/workspace/terjebh_CustoSales_master/target/mvnw' spring-boot:run &"
+                sh "'/var/lib/jenkins/workspace/terjebh_CustoSales_master/mvnw' spring-boot:run &"
             }
         }
     }
