@@ -11,7 +11,8 @@ pipeline {
         }
         stage('run') {
             steps {
-                sh "'./mvnw' spring-boot:run"
+                sh "'./mvnw' spring-boot:stop"
+                sh "'./mvnw' spring-boot:run &"
             }
         }
     }
