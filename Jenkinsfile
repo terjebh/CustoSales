@@ -12,7 +12,7 @@ pipeline {
         }
         stage('run') {
             steps {
-                sh "'/var/lib/jenkins/workspace/terjebh_CustoSales_master/mvnw' spring-boot:run &"
+                sh "'java' -jar /var/lib/jenkins/.m2/repository/com/custosales/CustoSales/0.0.1-SNAPSHOT/CustoSales-0.0.1-SNAPSHOT.jar &"
             }
         }
     }
