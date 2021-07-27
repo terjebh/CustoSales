@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh "'./mvnw' spring-boot:stop"
-                sh "'./mvnw' install"
+                sh "'./mvnw' clean package"
             }
         }
         stage('run') {
