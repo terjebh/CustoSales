@@ -6,13 +6,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "'./mvnw' install"
+                sh "'./mvnw' clean package"
             }
         }
         stage('run') {
             steps {
-                sh "'/var/lib/jenkins/workspace/terjebh_CustoSales_master/mvnw' spring-boot:stop"
-                sh "'/var/lib/jenkins/workspace/terjebh_CustoSales_master/mvnw' spring-boot:run &"
+                sh "'./mvnw' spring-boot:stop"
+                sh "'./mvnw' spring-boot:run"
             }
         }
     }
