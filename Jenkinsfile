@@ -12,7 +12,8 @@ pipeline {
         stage('run') {
             steps {
                 sh "'./mvnw' spring-boot:stop"
-                sh "'echo' ./mvnw spring-boot:run | at now + 1 minutes"
+                sh "'./mvnw' spring-boot:run"
+                sh "'bg' 1"
             }
         }
     }
