@@ -13,23 +13,13 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>CustoSales</name>
     <description>Demo project for Spring Boot</description>
+
     <properties>
         <java.version>11</java.version>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <configuration>
-                <archive>
-                    <manifest>
-                        <mainClass>main.CustoSalesApplication</mainClass>
-                    </manifest>
-                </archive>
-            </configuration>
-        </plugin>
-
     </properties>
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jdbc</artifactId>
